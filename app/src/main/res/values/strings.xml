@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">AppCompraVenta</string>
+    <string name="app_name">Compra-Venta</string>
+    <string name="label_titulo">Título</string>
+    <string name="edit_titulo">Título...</string>
+    <string name="label_descripcion">Descripción (opcional)</string>
+    <string name="edit_descripcion">Descripción del producto...</string>
+    <string name="label_email">Correo de contacto</string>
+    <string name="edit_email">Correo electrónico...</string>
 </resources>
