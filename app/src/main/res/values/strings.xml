@@ -6,4 +6,16 @@
     <string name="edit_descripcion">Descripción del producto...</string>
     <string name="label_email">Correo de contacto</string>
     <string name="edit_email">Correo electrónico...</string>
+    <string name="label_precio">Precio</string>
+    <string name="edit_precio">Precio...</string>
+    <string name="label_categoria">Categoría</string>
+    <string-array name="array_categoria">
+        <item>Indumentaria</item>
+        <item>Electrónica</item>
+        <item>Entretenimiento</item>
+        <item>Jardín</item>
+        <item>Vehículos</item>
+        <item>Juguetes</item>
+    </string-array>
+    <string name="nombre_switch">Ofrecer descuento de envío</string>
 </resources>
