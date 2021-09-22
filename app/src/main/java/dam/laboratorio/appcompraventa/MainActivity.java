@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
                 R.array.array_categoria, android.R.layout.simple_spinner_item);
 
         // Se especifica el diseño a usar cuando aparece la lista de opciones
-        //se comprueba funcionamiento de commit
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // Se aplica el adapter al spinner
