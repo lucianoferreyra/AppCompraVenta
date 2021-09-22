@@ -22,7 +22,7 @@
     <string name="label_direccion">Direccion de retiro</string>
     <string name="edit_direccion">Direccion de retiro...</string>
     <string name="checkbox_terminos">Aceptar términos y condiciones</string>
-    <string name="toggle_publicar">PUBLICAR</string>
+    <string name="publicar">PUBLICAR</string>
 
 
 </resources>

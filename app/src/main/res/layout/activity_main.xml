@@ -97,39 +97,40 @@
         android:layout_height="wrap_content" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkRetiro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/CheckBox_retiroEnPersona" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textViewRetiro"
         android:textColor="@color/black"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/label_direccion" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/editTextTextRetiro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:ems="10"
         android:hint="@string/edit_direccion"
         android:minHeight="48dp" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkTermino"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/checkbox_terminos" />
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:textOn="@string/toggle_publicar"
-        android:textOff="@string/toggle_publicar"
+    <Button
+        android:id="@+id/ButtonPublicar"
+        android:enabled="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ToggleButton" />
+        android:text="@string/publicar" />
 
 
 </LinearLayout>
