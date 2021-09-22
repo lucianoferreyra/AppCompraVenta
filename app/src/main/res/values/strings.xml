@@ -18,4 +18,11 @@
         <item>Juguetes</item>
     </string-array>
     <string name="nombre_switch">Ofrecer descuento de envío</string>
+    <string name="CheckBox_retiroEnPersona">Retiro en persona</string>
+    <string name="label_direccion">Direccion de retiro</string>
+    <string name="edit_direccion">Direccion de retiro...</string>
+    <string name="checkbox_terminos">Aceptar términos y condiciones</string>
+    <string name="toggle_publicar">PUBLICAR</string>
+
+
 </resources>
