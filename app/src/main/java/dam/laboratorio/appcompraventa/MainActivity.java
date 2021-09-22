@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -39,6 +40,42 @@ public class MainActivity extends AppCompatActivity {
         EditText ed1 = (EditText) findViewById(R.id.editTextTextRetiro);
 
 
+        SeekBar seekBar;
+        TextView mostrarPorcentajeDescuento;
+
+        mostrarPorcentajeDescuento = (TextView) findViewById(R.id.textPorcentaje);
+
+        // SeekBar
+        seekBar = (SeekBar)findViewById(R.id.seekBarDescuento);
+        // Valor Inicial
+        seekBar.setProgress(0);
+        // Valot Final
+        seekBar.setMax(100);
+        seekBar.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener() {
+                    //hace un llamado a la perilla cuando se arrastra
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar,
+                                                  int progress, boolean fromUser) {
+                        mostrarPorcentajeDescuento.setText(String.valueOf(progress)+" %");
+                    }
+                    //hace un llamado  cuando se toca la perilla
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                    }
+                    //hace un llamado  cuando se detiene la perilla
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                    }
+                });
+
+
+
+
+
+
+
+
+
+        //VERIFICACIONES
 
         //Verifico el checkbox de retiro a domicilio para hacer visible el campo domicilio
         ch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -75,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 
 }

@@ -23,6 +23,10 @@
     <string name="edit_direccion">Direccion de retiro...</string>
     <string name="checkbox_terminos">Aceptar términos y condiciones</string>
     <string name="publicar">PUBLICAR</string>
+    <string name="label_porcentaje">"0"</string>
+
+
+
 
 
 </resources>

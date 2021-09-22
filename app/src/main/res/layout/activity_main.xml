@@ -9,26 +9,26 @@
 
     <TextView
         android:id="@+id/textView"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/label_titulo" />
+        android:text="@string/label_titulo"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/edit_titulo"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:hint="@string/edit_titulo"/>
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/label_descripcion" />
+        android:text="@string/label_descripcion"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -43,10 +43,10 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/label_email" />
+        android:text="@string/label_email"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -58,10 +58,10 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/label_precio" />
+        android:text="@string/label_precio"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -74,10 +74,10 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/label_categoria" />
+        android:text="@string/label_categoria"
+        android:textColor="@color/black" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -86,15 +86,24 @@
 
     <Switch
         android:id="@+id/switch1"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/nombre_switch" />
+        android:text="@string/nombre_switch"
+        android:textColor="@color/black" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seekBarDescuento"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:min="0"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/textPorcentaje"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="labelPorcentaje" />
 
     <CheckBox
         android:id="@+id/checkRetiro"
@@ -104,20 +113,20 @@
 
     <TextView
         android:id="@+id/textViewRetiro"
-        android:textColor="@color/black"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/label_direccion" />
+        android:text="@string/label_direccion"
+        android:textColor="@color/black"
+        android:visibility="gone" />
 
     <EditText
         android:id="@+id/editTextTextRetiro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:ems="10"
         android:hint="@string/edit_direccion"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:visibility="gone" />
 
     <CheckBox
         android:id="@+id/checkTermino"
@@ -127,9 +136,9 @@
 
     <Button
         android:id="@+id/ButtonPublicar"
-        android:enabled="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/publicar" />
 
 
