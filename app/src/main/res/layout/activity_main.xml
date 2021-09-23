@@ -93,17 +93,19 @@
 
     <SeekBar
         android:id="@+id/seekBarDescuento"
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="100"
         android:min="0"
+        android:visibility="gone"
         android:progress="0" />
 
     <TextView
         android:id="@+id/textPorcentaje"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="labelPorcentaje" />
+        android:visibility="gone"
+        android:text="@string/label_porcentaje" />
 
     <CheckBox
         android:id="@+id/checkRetiro"
