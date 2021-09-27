@@ -54,7 +54,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/edit_email"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:inputType="textEmailAddress"/>
 
     <TextView
         android:id="@+id/textView4"

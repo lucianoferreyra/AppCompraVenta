@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         CheckBox ch2 = (CheckBox) findViewById(R.id.checkTermino);
         TextView tv1 = (TextView) findViewById(R.id.textViewRetiro);
         EditText ed1 = (EditText) findViewById(R.id.editTextTextRetiro);
-       Spinner spinnerDescuento = (Spinner) findViewById(R.id.spinner);
+        Spinner spinnerDescuento = (Spinner) findViewById(R.id.spinner);
+        EditText ed2 = (EditText) findViewById(R.id.editTextTextPersonName2);
 
         SeekBar seekBar;
         TextView mostrarPorcentajeDescuento;
@@ -159,17 +160,18 @@ public class MainActivity extends AppCompatActivity {
 
             ValidacionMain objValidar; //objeto de nuestro clase Validaciones
 
-
+            //Validacion de los campos
             objValidar = new ValidacionMain();
             int valueSwitch = 0;
             String text ="";
             if (objValidar.vacio(edtTitulo))
                 text += "El campo Titulo es obligatorio.\n";
+            if (!objValidar.textoValido(edtTitulo.getText().toString()))
+                text += "El título ingresado es inválido.\n";
             if (objValidar.vacio(edtEmail))
                 text += "El campo Email es obligatorio.\n";
-            if (!objValidar.isEmail(edtEmail.toString().trim()))
+            else if (!objValidar.esEmailValido(edtEmail.getText().toString()))
                 text += "El campo Email es inválido.\n";
-
             if (objValidar.vacio(edtPrecio)) {
                 text += "El campo Precio es obligatorio.\n";
             }
@@ -180,14 +182,20 @@ public class MainActivity extends AppCompatActivity {
                 if (objValidar.mayor(edtPorcentaje))
                     text += "Por favor seleccione un porcentaje mayor a 0 o quite la opcion de ofrecer descuento de envio.\n";
             }
+            if (!objValidar.textoValido(ed2.getText().toString()))
+                text += "La descripción ingresada es inválida.\n";
             if(ch1.isChecked()) {
                 edtDireccion = ed1;
                 if (objValidar.vacio(edtDireccion))
                     text += "El campo Dirección es obligatorio.\n";
+                else if (!objValidar.textoValido(edtDireccion.getText().toString()))
+                    text += "La dirección ingresada es inválida.\n";
             }
 
             if(text.length()>0)
                 Toast.makeText(getApplicationContext(),text, Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(getApplicationContext(),"Se ha creado correctamente", Toast.LENGTH_SHORT).show();
         }
 
     });

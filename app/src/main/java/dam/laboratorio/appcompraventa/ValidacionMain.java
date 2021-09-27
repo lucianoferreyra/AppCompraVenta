@@ -5,24 +5,23 @@ import android.util.Patterns;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
 public class ValidacionMain {
 
+    //metodo para validar si es un email (falta validacion 3 caracteres despues del @)
 
-    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    //metodo para validar si es un email (no funciona)
-    Pattern pattern = Pattern.compile("@.[a-z]_");
-    public  boolean isEmail(String cadena) {
-        boolean resultado;
-        if (cadena.matches(emailPattern)) {
-            resultado = true;
-        } else {
-            resultado = false;
-        }
-
-        return resultado;
+    //String emailPattern = "[a-zA-Z0-9._-]+@+[a-z]{3,}+[.]+[a-z]";
+    public static boolean esEmailValido(CharSequence email) {
+        //return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+        Pattern pattern;
+        Matcher matcher;
+        final String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@+[a-z]{3,}+[.]+[a-z]*";
+        pattern = Pattern.compile(EMAIL_PATTERN);
+        matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 
     //El campo setError muestra los campos con errores
@@ -69,4 +68,14 @@ public class ValidacionMain {
         }
         return false;
     }
+
+    public boolean textoValido (String texto){
+        String textoPattern = "[a-zA-Z0-9,.\n]*";
+
+        Pattern pattern = Pattern.compile(textoPattern);
+        Matcher m = pattern.matcher(texto);
+        return m.matches();
+    }
+
+
 }
