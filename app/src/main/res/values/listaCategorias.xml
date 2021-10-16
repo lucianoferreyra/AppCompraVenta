@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorias">
+        <item>REMERA</item>
+        <item>SHORT</item>
+        <item>CAMPERA</item>
+        <item>BERMUDA</item>
+        <item>CAMISA</item>
+        <item>BOXER</item>
+        <item>JEANS</item>
+        <item>JOGGIN</item>
+    </string-array>
+</resources>
