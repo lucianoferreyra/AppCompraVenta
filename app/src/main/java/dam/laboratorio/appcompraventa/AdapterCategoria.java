@@ -1,40 +1,49 @@
 package dam.laboratorio.appcompraventa;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class AdapterCategoria extends ArrayAdapter<Categoria> {
+public class AdapterCategoria extends RecyclerView.Adapter<AdapterCategoria.ViewholderCat> {
 
-    ArrayList<Categoria> categoriaArrayList;
-    //CONSTRUCTORES DE LA LISTA.
+    private ArrayList<Categoria> listaCategoria;
 
-    public AdapterCategoria(Context context, ArrayList<Categoria> categoriaArrayList) {
-        super(context, 0, categoriaArrayList);
+    public static class ViewholderCat extends RecyclerView.ViewHolder{
+        CardView cv;
+        TextView tvTitulo;
+        public ViewholderCat(@NonNull View itemView) {
+            super(itemView);
+            cv = itemView.findViewById(R.id.cvCategoria);
+            tvTitulo = itemView.findViewById(R.id.tvTitulo);
+        }
+    }
+    public AdapterCategoria(ArrayList<Categoria> listaCat){
+        this.listaCategoria = listaCat;
     }
 
-    //IMPLEMENTAMOS EL METODO getView().
+    @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
-        LayoutInflater inflater = LayoutInflater.from(this.getContext());
-        View fila  = inflater.inflate(R.layout.fila_cat, parent, false);
+    public ViewholderCat onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.fila_cat,null,false);
+        ViewholderCat vh = new ViewholderCat(view);
+        return vh;
+    }
 
-        TextView tvTitulo = fila.findViewById(R.id.tvTitulo);
+    @Override
+    public void onBindViewHolder(@NonNull ViewholderCat viewholderCat, int i) {
+        viewholderCat.tvTitulo.setTag(i);
+    }
 
-        Categoria unaCategoria = this.getItem(position);
 
-        tvTitulo.setText(unaCategoria.getNombre());
-
-        return super.getView(position, convertView, parent);
+    @Override
+    public int getItemCount() {
+        return this.listaCategoria.size();
     }
 
 

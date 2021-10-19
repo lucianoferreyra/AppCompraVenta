@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     //DEFINICIÓN DE RECYCLER VIEW.
     private RecyclerView recyclerView;
     //DEFINICION DE ADAPTER.
-    ArrayAdapter<Categoria> categoriaArrayAdapter;
+    AdapterCategoria categoriaArrayAdapter;
 
 
     @Override
@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
 //
 //
 
-        this.categoriaArrayAdapter = new AdapterCategoria(this, categoriaArrayList);
+        this.categoriaArrayAdapter = new AdapterCategoria(categoriaArrayList);
 
-        recyclerView.setAdapter();
+        //recyclerView.setAdapter();
 
 
     }
